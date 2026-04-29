@@ -1,9 +1,14 @@
-import transaction
+import account
+def check_balance():
+    return account.balance
 
-def show_menu():
-    print("\n--- ATM MENU ---")
-    print("1. Check Balance")
-    print("2. Deposit")
-    print("3. Withdraw")
-    print("4. Mini Statement")
-    print("5. Exit")
+def deposit(amount):
+    if amount>0:
+        account.balance += amount
+        return True
+    return False
+def withdraw(amount):
+    if 0 < amount <= account.balance:
+        account.balance -= amount
+        return True
+    return False
