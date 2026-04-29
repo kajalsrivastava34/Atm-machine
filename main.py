@@ -1,7 +1,14 @@
+import transaction
+def show_menu():
+    print("\n--- ATM MENU ---")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Mini Statement")
+    print("5. Exit")
 def run_atm():
     print("Welcome to Our ATM Service!")
     transaction_history=[]
-
     while True:
         show_menu()
         choice = int(input("Enter Number from the menu according to your need: "))
